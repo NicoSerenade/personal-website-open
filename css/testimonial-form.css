@@ -1,0 +1,1073 @@
+/* ================================================== */
+/* TESTIMONIAL FORM SPECIFIC STYLES */
+/* ================================================== */
+
+/* Form Container Enhancement */
+#testimonial-form {
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #fdf8f4;
+}
+
+/* Form Header Styling */
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(252, 240, 227, 0.9) 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 30px rgba(215, 84, 0, 0.1),
+        0 1px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(215, 84, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        var(--title-orange, #d35400), 
+        #e67e22, 
+        var(--title-orange, #d35400));
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.form-header h1 {
+    margin-bottom: 1.5rem;
+    color: var(--title-orange, #d35400);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    position: relative;
+}
+
+.form-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--title-orange, #d35400);
+    border-radius: 2px;
+}
+
+.form-header p {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Guidelines Section Styling */
+.guidelines-section {
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.guidelines-card {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(252, 240, 227, 0.95) 100%);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 
+        0 8px 25px rgba(215, 84, 0, 0.08),
+        0 3px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(215, 84, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.guidelines-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 35px rgba(215, 84, 0, 0.12),
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.guidelines-content {
+    flex: 1;
+    text-align: center;
+}
+
+.guidelines-content h3 {
+    color: var(--title-orange, #d35400);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.guidelines-header {
+    text-align: center !important;
+}
+
+.guidelines-content p {
+    color: #666;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.guidelines-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.guidelines-list li {
+    position: relative;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.guidelines-list li:last-child {
+    margin-bottom: 0;
+}
+
+.guidelines-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--title-orange, #d35400);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-download {
+    display: inline-block;
+    background: #f5d5a8;
+    color: var(--title-orange, #d35400);
+    padding: 0.66rem 1.32rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(215, 84, 0, 0.1);
+    border: 2px solid var(--title-orange, #d35400);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.99rem;
+    text-align: center;
+    white-space: nowrap;
+    min-height: 44px;
+    line-height: 1.2;
+    min-width: 110px;
+}
+
+.btn-download:hover {
+    background: #f0ca94;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(215, 84, 0, 0.2);
+    color: var(--title-orange, #d35400);
+    text-decoration: none;
+}
+
+.btn-download:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    background: #ccc;
+    border-color: #bbb;
+    box-shadow: none;
+}
+
+/* Main Form Container */
+.testimonial-form {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(255, 255, 255, 0.95) 100%);
+    padding: 3.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 35px rgba(215, 84, 0, 0.08),
+        0 5px 15px rgba(0, 0, 0, 0.04);
+    max-width: 750px;
+    margin: 0 auto;
+    border: 1px solid rgba(215, 84, 0, 0.08);
+    position: relative;
+}
+
+.testimonial-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--title-orange, #d35400), 
+        transparent);
+    border-radius: 0 0 2px 2px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--title-orange, #d35400);
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    position: relative;
+}
+
+.form-group label::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: rgba(215, 84, 0, 0.3);
+    border-radius: 1px;
+}
+
+/* Remove underline from checkbox label */
+.testimonial-form .checkbox-label::after {
+    display: none !important;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(224, 213, 199, 0.8);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, 
+        rgba(253, 252, 250, 0.9) 0%, 
+        rgba(255, 255, 255, 0.95) 100%);
+    font-family: inherit;
+    position: relative;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--title-orange, #d35400);
+    box-shadow: 
+        0 0 0 4px rgba(215, 84, 0, 0.1),
+        0 4px 12px rgba(215, 84, 0, 0.15);
+    background: rgba(255, 255, 255, 0.98);
+    transform: translateY(-1px);
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Testimonial textarea specific styling */
+#testimonial {
+    min-height: 180px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(215, 84, 0, 0.3) transparent;
+}
+
+/* Webkit scrollbar styling for testimonial textarea */
+#testimonial::-webkit-scrollbar {
+    width: 8px;
+}
+
+#testimonial::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#testimonial::-webkit-scrollbar-thumb {
+    background-color: rgba(215, 84, 0, 0.3);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+#testimonial::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(215, 84, 0, 0.5);
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+    font-style: italic;
+    opacity: 0.8;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Enhanced placeholder styling for scrollable placeholders */
+.form-group .scrollable-placeholder::placeholder {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+/* Enable scrolling for textarea placeholders when in scrollable mode */
+.form-group textarea.scrollable-placeholder {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(215, 84, 0, 0.3) transparent;
+}
+
+/* Enable scrolling for input placeholders when in scrollable mode */
+.form-group input.scrollable-placeholder {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(215, 84, 0, 0.3) transparent;
+    /* Increase height to accommodate multi-line placeholder text */
+    min-height: 60px;
+    height: auto;
+    white-space: pre-wrap;
+}
+
+/* Specific height expansion for first two small input boxes when placeholder overflows */
+.form-group input.expanded-placeholder {
+    height: 4.5rem; /* Sudden expansion to accommodate 2 lines with equal spacing */
+    min-height: 4.5rem;
+    padding-top: 1rem; /* Keep normal top padding */
+    padding-bottom: 2.5rem; /* Add expansion to bottom padding only */
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    display: flex;
+    align-items: flex-start;
+    border-color: rgba(215, 84, 0, 0.2);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Enhanced placeholder styling for expanded input placeholders */
+.form-group input.expanded-placeholder::placeholder {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.4;
+    display: block;
+}
+
+/* Additional styling to support multiline input behavior */
+.form-group input.expanded-placeholder {
+    vertical-align: top;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Webkit scrollbar styling for textarea placeholders */
+.form-group textarea.scrollable-placeholder::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group textarea.scrollable-placeholder::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.form-group textarea.scrollable-placeholder::-webkit-scrollbar-thumb {
+    background-color: rgba(215, 84, 0, 0.3);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.form-group textarea.scrollable-placeholder::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(215, 84, 0, 0.5);
+}
+
+/* Webkit scrollbar styling for input placeholders */
+.form-group input.scrollable-placeholder::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group input.scrollable-placeholder::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.form-group input.scrollable-placeholder::-webkit-scrollbar-thumb {
+    background-color: rgba(215, 84, 0, 0.3);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.form-group input.scrollable-placeholder::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(215, 84, 0, 0.5);
+}
+
+/* Enhanced focus state for scrollable placeholders */
+.form-group .scrollable-placeholder:focus::placeholder {
+    opacity: 0.6;
+    color: #777;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* Form Help Text */
+.form-help {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Character Count Styling */
+.char-count {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(215, 84, 0, 0.1);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.char-requirement {
+    font-style: italic;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+/* Checkbox Styling - Complete Override */
+.testimonial-form .checkbox-group {
+    background: rgba(247, 240, 240, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(215, 84, 0, 0.1);
+    margin-top: 0rem;
+    padding: 1.5rem;
+    display: block !important;
+    align-items: unset !important;
+    gap: unset !important;
+}
+
+.testimonial-form .checkbox-label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 500;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.testimonial-form .checkbox-label input[type="checkbox"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    cursor: pointer;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    left: -9999px !important;
+}
+
+.testimonial-form .checkmark {
+    flex-shrink: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
+    border: 2px solid rgba(224, 213, 199, 0.8) !important;
+    border-radius: 6px !important;
+    position: relative !important;
+    background: linear-gradient(135deg, 
+        rgba(253, 252, 250, 0.9) 0%, 
+        rgba(255, 255, 255, 0.95) 100%) !important;
+    transition: all 0.3s ease !important;
+    margin-top: 2px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+.testimonial-form .checkbox-label:hover .checkmark {
+    border-color: var(--title-orange, #d35400) !important;
+    box-shadow: 0 2px 8px rgba(215, 84, 0, 0.15) !important;
+}
+
+.testimonial-form .checkbox-label input[type="checkbox"]:checked ~ .checkmark {
+    background: linear-gradient(135deg, var(--title-orange, #d35400), #e67e22) !important;
+    border-color: var(--title-orange, #d35400) !important;
+    transform: scale(1.05) !important;
+}
+
+.testimonial-form .checkbox-label input[type="checkbox"]:checked ~ .checkmark::after {
+    content: '✓' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    display: block !important;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 2px solid rgba(215, 84, 0, 0.1);
+    position: relative;
+}
+
+.form-actions::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--title-orange, #d35400);
+    border-radius: 1px;
+}
+
+/* Success Message Enhancement - Updated for Automatic Workflow */
+.form-success {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(252, 240, 227, 0.95) 100%);
+    padding: 3.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 35px rgba(215, 84, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    border: 2px solid rgba(215, 84, 0, 0.2);
+    position: relative;
+}
+
+.form-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--title-orange, #d35400), 
+        #e67e22, 
+        var(--title-orange, #d35400));
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.form-success h3 {
+    color: var(--title-orange, #d35400);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.form-success h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--title-orange, #d35400);
+    border-radius: 2px;
+}
+
+.form-success p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Success message icon enhancement */
+.form-success::after {
+    content: '✓';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: var(--title-orange, #d35400);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(215, 84, 0, 0.3);
+}
+
+/* Photo Upload Container */
+.photo-upload-container {
+    position: relative;
+    border: 2px dashed rgba(215, 84, 0, 0.3);
+    border-radius: 12px;
+    background: rgba(253, 252, 250, 0.9);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.photo-upload-container:hover {
+    border-color: var(--title-orange, #d35400);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Hide the default file input */
+.photo-upload-container input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Photo Upload Placeholder */
+.photo-upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    min-height: 120px;
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.photo-upload-placeholder p {
+    margin: 0.5rem 0;
+    color: var(--title-orange, #d35400);
+    font-weight: 600;
+}
+
+.photo-upload-placeholder small {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* Circular Photo Preview */
+.photo-preview {
+    position: relative;
+    display: none;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.photo-preview-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--title-orange, #d35400);
+    box-shadow: 0 8px 25px rgba(215, 84, 0, 0.2);
+    background: #fff;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Remove Photo Button */
+.remove-photo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.remove-photo:hover {
+    background: rgba(220, 38, 38, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Photo Upload States */
+.photo-upload-container.dragover {
+    border-color: var(--title-orange, #d35400);
+    background: rgba(252, 240, 227, 0.8);
+    transform: scale(1.02);
+}
+
+.photo-upload-container.error {
+    border-color: #ef4444;
+    background: rgba(254, 242, 242, 0.9);
+}
+
+/* ================================================== */
+/* SIMPLE ERROR MESSAGE */
+/* ================================================== */
+
+.file-error-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, 
+        rgba(239, 68, 68, 0.95) 0%, 
+        rgba(220, 38, 38, 0.95) 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    z-index: 10000;
+    max-width: 400px;
+    width: 90%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.5s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.file-error-toast.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.file-error-toast .error-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* ================================================== */
+/* FORM BUTTON RESPONSIVENESS */
+/* ================================================== */
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .testimonial-form {
+        padding: 2.5rem 2rem;
+        margin: 0 1rem;
+    }
+    
+    .form-header {
+        padding: 2.5rem 1.5rem;
+        margin: 0 1rem 2rem 1rem;
+    }
+    
+    .guidelines-section {
+        margin: 1.5rem 1rem 2.5rem 1rem;
+    }
+    
+    .guidelines-card {
+        padding: 1.8rem 1.5rem;
+    }
+    
+    .guidelines-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .form-actions {
+        gap: 1rem;
+    }
+    
+    .checkbox-group {
+        padding: 1.2rem;
+    }
+    
+    .photo-upload-placeholder {
+        padding: 1.5rem;
+        min-height: 100px;
+    }
+    
+    .upload-icon {
+        font-size: 2rem;
+    }
+    
+    .photo-preview-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .photo-preview {
+        min-height: 160px;
+        padding: 1.5rem;
+    }
+    
+    .remove-photo {
+        top: 1rem;
+        right: 1rem;
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .file-error-toast {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+        max-width: 350px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .testimonial-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-header {
+        padding: 2rem 1rem;
+    }
+    
+    .form-header h1 {
+        font-size: 2rem;
+    }
+    
+    .guidelines-section {
+        margin: 1rem 0.5rem 2rem 0.5rem;
+    }
+    
+    .guidelines-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .guidelines-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .guidelines-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .guidelines-list li {
+        font-size: 0.9rem;
+        margin-bottom: 0.7rem;
+        padding-left: 1.3rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.9rem 1rem;
+    }
+    
+    .form-actions {
+        gap: 0.8rem;
+    }
+    
+    .photo-upload-placeholder {
+        padding: 1rem;
+        min-height: 80px;
+    }
+    
+    .upload-icon {
+        font-size: 1.5rem;
+    }
+    
+    .photo-preview-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .photo-preview {
+        min-height: 140px;
+        padding: 1rem;
+    }
+    
+    .remove-photo {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+        top: 0.8rem;
+        right: 0.8rem;
+    }
+
+    .file-error-toast {
+        padding: 1rem 1.2rem;
+        font-size: 0.95rem;
+        max-width: 300px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .photo-preview-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .file-error-toast {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        max-width: 280px;
+    }
+}
+
+/* Download Button Responsiveness - Exact same as btn-primary */
+/* Extra large screens - Desktop */
+@media (min-width: 1440px) {
+    .btn-download {
+        padding: 0.77rem 1.65rem;
+        font-size: 1.045rem;
+        min-height: 46.2px;
+        min-width: 121px;
+    }
+}
+
+/* Large screens - Desktop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .btn-download {
+        padding: 0.715rem 1.43rem;
+        font-size: 0.99rem;
+        min-height: 45.1px;
+        min-width: 115.5px;
+    }
+}
+
+/* Medium screens - Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .btn-download {
+        padding: 0.66rem 1.32rem;
+        font-size: 0.99rem;
+        min-height: 44px;
+        min-width: 110px;
+    }
+}
+
+/* Small screens - Mobile landscape */
+@media (min-width: 480px) and (max-width: 767px) {
+    .btn-download {
+        padding: 0.715rem 1.21rem;
+        font-size: 0.935rem;
+        min-height: 44px;
+        min-width: 104.5px;
+    }
+}
+
+/* Extra small screens - Mobile portrait */
+@media (max-width: 479px) {
+    .btn-download {
+        padding: 0.66rem 0.99rem;
+        font-size: 0.88rem;
+        min-height: 44px;
+        min-width: 99px;
+    }
+}
+
+/* Ultra small screens - Very small mobile */
+@media (max-width: 320px) {
+    .btn-download {
+        padding: 0.605rem 0.88rem;
+        font-size: 0.825rem;
+        min-height: 41.8px;
+        min-width: 93.5px;
+    }
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-form,
+.form-header,
+.guidelines-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Focus indicators for accessibility */
+.form-group input:focus,
+.form-group textarea:focus,
+.checkbox-label:focus-within .checkmark,
+.btn:focus {
+    outline: 3px solid rgba(215, 84, 0, 0.3);
+    outline-offset: 2px;
+}

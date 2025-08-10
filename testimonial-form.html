@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Core SEO -->
+    <title>Add Your Testimonial - Nicolás Castañeda</title>
+    <meta name="description" content="Share your experience working with Nicolás Castañeda. Add your testimonial to help others understand the value of collaboration.">
+    <link rel="canonical" href="https://nicoserenade.com/testimonial-form.html">
+    
+    <!-- Author -->
+    <meta name="author" content="Nicolás Castañeda">
+    
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#2B4C8C">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/testimonial-form.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Nicolás Castañeda</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/index.html" class="nav-link">Home</a></li>
+                    <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/contact.html" class="nav-link contact-btn">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="testimonial-form" class="section visible">
+            <div class="container">
+                <div class="form-header">
+                    <h1>Share Your Experience</h1>
+                    <p>Whether we've collaborated academically, professionally or connected personally, your story inspires others to reach out—weaving this growing community of meaningful connections.</p>
+                </div>
+
+                <div class="guidelines-section">
+                    <div class="guidelines-card">
+                        <div class="guidelines-content">
+                            <h3 class="guidelines-header">Not Sure What to Write? Consider:</h3>
+                            <ul class="guidelines-list">
+                                <li>What's it like to hang out/work with Nicolás?</li>
+                                <li>What makes Nicolás different from other people you know?</li>
+                                <li>If you had to describe Nicolás in three words, what would they be?</li>
+                                <li>Just be honest and let the words flow naturally, I will genuinely appreciate it!</li>
+                            </ul>
+                        </div>
+                    <!-- <a href="content/testimonial-guidelines.pdf" class="btn-download" download>
+                        ⬇ Download Guidelines (PDF)
+                    </a> -->
+                    </div>
+                </div>
+
+                <form class="testimonial-form" id="testimonialForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="First name and last name">
+                        <small class="form-help">e.g., "Sarah Johnson", "Alex Rodriguez"</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role or Achievement</label>
+                        <input type="text" id="role" name="role" required placeholder="Your role or achievement you're proud of">
+                        <small class="form-help">e.g., "Undergraduate Biology Student", "Academic Excellence Scholar", "Psychologist"</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="testimonial">Your Experience</label>
+                        <textarea id="testimonial" name="testimonial" required 
+                                  placeholder="What's it like to interact with Nicolás? What qualities make connecting with him—personally, academically, or professionally—valuable?"
+                                  minlength="150" maxlength="300"></textarea>
+                        <small class="form-help">
+                            <span class="char-count">0/300 characters</span>
+                            <span class="char-requirement">(minimum 150 characters)</span>
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Your Photo</label>
+                        <div class="photo-upload-container">
+                            <input type="file" id="photo" name="photo" accept="image/*" required>
+                            <div class="photo-preview" id="photoPreview" style="display: none;">
+                                <div class="photo-preview-circle">
+                                    <img id="previewImage" src="" alt="Photo preview">
+                                </div>
+                                <button type="button" class="remove-photo" id="removePhoto">×</button>
+                            </div>
+                            <div class="photo-upload-placeholder" id="photoPlaceholder">
+                                <div class="upload-icon">📷</div>
+                                <p>Click to upload your headshot</p>
+                                <small>JPG, PNG or GIF (max 5MB)</small>
+                            </div>
+                        </div>
+                        <small class="form-help">Please upload a real headshot of yourself—can be casual or professional. (Required)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Constructive Feedback (Optional)</label>
+                        <textarea id="feedback" name="feedback" 
+                                  placeholder="I'm committed to growing every day, so any advice you can give me on how I could be a better professional, teammate, or friend would truly mean the world to me."
+                                  maxlength="200"></textarea>
+                        <small class="form-help">Your feedback will stay completely private between us. Will not be displayed publicly.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                        <small class="form-help">Used only to send you a thank you message, if you wish. Will not be displayed publicly.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span class="checkmark"></span>
+                                I consent to having my testimonial and photo displayed on this website
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Submit Testimonial</button>
+                        <a href="/index.html" class="btn-secondary">← Home</a>
+                    </div>
+                </form>
+
+                <div class="form-success" id="successMessage" style="display: none;">
+                    <h3>Testimonial Submitted Successfully! ☀️</h3>
+                    <p>I'm so grateful you took the time to write this.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                        <a href="/index.html#testimonials" class="btn-primary">Testimonials</a>
+                        <a href="/index.html" class="btn-secondary">← Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-quote">"Building technology for human flourishing"</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@nicoserenade" target="_blank" rel="noopener" aria-label="YouTube">
+                    <img src="/images/youtube.svg" alt="" width="24" height="24">
+                </a>
+                <a href="https://github.com/NicoSerenade" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="/images/github.svg" alt="" width="24" height="24">
+                </a>
+                <a href="https://x.com/NicoSerenade" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                    <img src="/images/x.svg" alt="" width="24" height="24">
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <p>© 2025 Nicolás Castañeda</p>
+        </div>
+    </footer>
+
+    <script src="/js/testimonial-form.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
